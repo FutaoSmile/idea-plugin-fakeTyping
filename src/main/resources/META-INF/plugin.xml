@@ -4,16 +4,32 @@
     <id>com.futao.fakeTyping</id>
     <name>FakeTyping</name>
     <version>1.0</version>
-    <vendor email="support@example.com" url="http://www.example.com">FakeTyping</vendor>
+    <vendor email="1185172056@qq.com" url="https://github.com/FutaoSmile/idea-plugin-fakeTyping">FakeTyping</vendor>
 
     <description><![CDATA[
-      模拟打字机效果的插件。<br>
-      在编辑器中右键点击文件，选择"FakeTyping"选项，将会清空当前文件内容并模拟打字机效果重新输入文件内容。<br>
-      <a href="https://plugins.jetbrains.com/plugin/PLUGIN_ID">插件主页</a> | <a href="help/fakeTyping-help.html">帮助文档</a>
+<h2>功能特点</h2>
+<ul>
+    <li><strong>打字机效果：</strong>清空当前文件内容，然后以打字机效果重新输入文件内容。</li>
+    <li><strong>可视化速度控制：</strong>使用直观的滑动条来设置打字速度，颜色从绿色（快）到红色（慢）渐变。</li>
+    <li><strong>浮动控制面板：</strong>打字过程中显示可拖动的控制面板。</li>
+    <li><strong>暂停/继续功能：</strong>可以随时暂停打字过程，需要时再继续。</li>
+    <li><strong>还原功能：</strong>可以立即还原文件到原始内容，无需等待打字完成。</li>
+    <li><strong>状态通知：</strong>操作完成时会显示通知提示。</li>
+    <li><strong>光标跟随：</strong>打字过程中光标会跟随当前输入位置。</li>
+    <li><strong>随机速度变化：</strong>可选择性地启用随机打字速度变化，模拟真实人类打字的节奏。</li>
+</ul>
     ]]></description>
 
     <change-notes><![CDATA[
-      初始版本。
+      版本 1.0:
+      - 初始发布版本
+      - 实现打字机效果功能
+      - 可配置的打字速度
+      - 带颜色渐变的可视化速度滑动条
+      - 带暂停/继续和还原功能的浮动控制面板
+      - 随机速度变化以模拟真实打字节奏
+      - 状态通知功能
+      - 打字过程中的光标跟随
     ]]></change-notes>
 
     <!-- 兼容的IDEA版本 -->
