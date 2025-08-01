@@ -1,0 +1,43 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.futao.fakeTyping</id>
+    <name>FakeTyping</name>
+    <version>1.0</version>
+    <vendor email="support@example.com" url="http://www.example.com">FakeTyping</vendor>
+
+    <description><![CDATA[
+      模拟打字机效果的插件。<br>
+      在编辑器中右键点击文件，选择"FakeTyping"选项，将会清空当前文件内容并模拟打字机效果重新输入文件内容。<br>
+      <a href="https://plugins.jetbrains.com/plugin/PLUGIN_ID">插件主页</a> | <a href="help/fakeTyping-help.html">帮助文档</a>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      初始版本。
+    ]]></change-notes>
+
+    <!-- 兼容的IDEA版本 -->
+    <idea-version since-build="203.0"/>
+
+    <!-- 插件依赖 -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 注册设置服务 -->
+        <applicationService serviceImplementation="com.futao.faketyping.FakeTypingSettings"/>
+
+        <!-- 注册设置界面 -->
+        <applicationConfigurable instance="com.futao.faketyping.FakeTypingConfigurable"
+                                 id="com.futao.faketyping.FakeTypingConfigurable"
+                                 displayName="FakeTyping设置"/>
+    </extensions>
+
+    <actions>
+        <action id="FakeTyping.EditorPopupAction"
+                class="com.futao.faketyping.FakeTypingAction"
+                text="FakeTyping"
+                description="模拟打字机效果">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>FakeTyping 插件帮助</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #3592C4;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3592C4;
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        .tip {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3592C4;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .feature {
+            background-color: #f0f7ff;
+            border-left: 4px solid #5cb85c;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .control-panel {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3592C4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FakeTyping 插件帮助</h1>
+    
+    <div class="section">
+        <h2>简介</h2>
+        <p>FakeTyping 是一个模拟打字机效果的 IntelliJ IDEA 插件。它可以清空当前文件内容，然后以打字机效果重新输入文件内容，适用于演示、教学或录制视频等场景。</p>
+    </div>
+    
+    <div class="section">
+        <h2>基本使用</h2>
+        <ol>
+            <li>在编辑器中打开一个文件</li>
+            <li>右键点击编辑区域</li>
+            <li>在弹出的菜单中选择 <code>FakeTyping</code></li>
+            <li>在弹出的对话框中使用滑动条设置打字速度</li>
+            <li>点击确定，观看打字机效果</li>
+        </ol>
+    </div>
+    
+    <div class="feature">
+        <h2>新增功能</h2>
+        <ul>
+            <li><strong>可视化速度滑动条</strong>：使用直观的滑动条来设置打字速度，颜色从绿色（快）到红色（慢）渐变</li>
+            <li><strong>控制面板</strong>：打字过程中会显示一个浮动控制面板，可以暂停/继续或还原操作</li>
+            <li><strong>暂停/继续功能</strong>：可以随时暂停打字过程，需要时再继续</li>
+            <li><strong>还原功能</strong>：可以立即还原文件到原始内容，无需等待打字完成</li>
+            <li><strong>状态通知</strong>：操作完成时会显示通知提示</li>
+            <li><strong>光标跟随</strong>：打字过程中光标会跟随当前输入位置</li>
+        </ul>
+    </div>
+    
+    <div class="control-panel">
+        <h2>控制面板使用</h2>
+        <p>启动打字效果后，编辑器右上角会出现一个浮动控制面板，包含以下按钮：</p>
+        <ul>
+            <li><span class="button">暂停</span> / <span class="button">继续</span>：暂停或继续打字过程</li>
+            <li><span class="button">还原</span>：立即还原文件到原始内容</li>
+        </ul>
+        <p>控制面板可以拖动到编辑器内的任意位置。</p>
+    </div>
+    
+    <div class="section">
+        <h2>设置选项</h2>
+        <p>您可以通过 <code>File > Settings > Tools > FakeTyping设置</code> 来配置插件的默认行为：</p>
+        <ul>
+            <li><strong>默认打字速度</strong>：每个字符的输入间隔（毫秒），默认为50毫秒</li>
+            <li><strong>最小打字速度</strong>：允许的最小输入间隔，默认为1毫秒</li>
+            <li><strong>最大打字速度</strong>：允许的最大输入间隔，默认为200毫秒</li>
+            <li><strong>启用随机打字速度变化</strong>：模拟真实人类打字的速度变化，默认启用</li>
+            <li><strong>随机速度变化范围</strong>：速度变化的百分比范围，默认为30%</li>
+        </ul>
+    </div>
+    
+    <div class="tip">
+        <p><strong>提示：</strong> 对于大文件，打字过程可能需要较长时间。您可以使用控制面板中的"暂停"按钮暂时中断打字过程，或使用"还原"按钮立即恢复原始内容。</p>
+    </div>
+    
+    <div class="section">
+        <h2>常见问题</h2>
+        <p><strong>Q: 如何停止打字过程？</strong><br>
+        A: 您可以使用控制面板中的"暂停"按钮暂停打字过程，或使用"还原"按钮立即恢复原始内容。</p>
+        
+        <p><strong>Q: 打字速度设置多少合适？</strong><br>
+        A: 这取决于您的用途。演示代码时，50-100毫秒通常是一个不错的选择；如果是为了录制视频，可能需要更快的速度（10-30毫秒）。</p>
+        
+        <p><strong>Q: 为什么有时打字速度会变化？</strong><br>
+        A: 插件默认启用了随机打字速度变化功能，以模拟真实人类打字的节奏。您可以在设置中禁用此功能或调整变化范围。</p>
+        
+        <p><strong>Q: 控制面板挡住了我的代码，怎么办？</strong><br>
+        A: 控制面板可以拖动到编辑器内的任意位置，您可以将其移动到不影响查看代码的区域。</p>
+    </div>
+</body>
+</html>
