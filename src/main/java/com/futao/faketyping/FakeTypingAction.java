@@ -85,7 +85,12 @@ public class FakeTypingAction extends AnAction {
         FakeTypingSettings settings = FakeTypingSettings.getInstance();
 
         // 使用滑动组件让用户选择打字速度
-        int typingSpeed = showSpeedSliderDialog(project, settings);
+        Integer typingSpeed = showSpeedSliderDialog(project, settings);
+        
+        // 如果用户取消了操作，则不继续执行
+        if (typingSpeed == null) {
+            return;
+        }
 
         // 创建控制按钮
         createControlPanel(project, editor, document, typingSpeed, settings);
@@ -455,8 +460,8 @@ public class FakeTypingAction extends AnAction {
         dialog.setResizable(false);
         dialog.setVisible(true);
         
-        // 返回用户选择的值或默认值
-        return confirmed[0] ? result[0] : settings.typingSpeed;
+        // 如果用户确认，返回选择的值；如果取消，返回null
+        return confirmed[0] ? result[0] : null;
     }
 
     @Override
