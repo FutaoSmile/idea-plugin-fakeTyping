@@ -7,17 +7,8 @@
     <vendor email="1185172056@qq.com" url="https://github.com/FutaoSmile/idea-plugin-fakeTyping">FakeTyping</vendor>
 
     <description><![CDATA[
-<h2>功能特点</h2>
-<ul>
-    <li><strong>打字机效果：</strong>清空当前文件内容，然后以打字机效果重新输入文件内容。</li>
-    <li><strong>可视化速度控制：</strong>使用直观的滑动条来设置打字速度，颜色从绿色（快）到红色（慢）渐变。</li>
-    <li><strong>浮动控制面板：</strong>打字过程中显示可拖动的控制面板。</li>
-    <li><strong>暂停/继续功能：</strong>可以随时暂停打字过程，需要时再继续。</li>
-    <li><strong>还原功能：</strong>可以立即还原文件到原始内容，无需等待打字完成。</li>
-    <li><strong>状态通知：</strong>操作完成时会显示通知提示。</li>
-    <li><strong>光标跟随：</strong>打字过程中光标会跟随当前输入位置。</li>
-    <li><strong>随机速度变化：</strong>可选择性地启用随机打字速度变化，模拟真实人类打字的节奏。</li>
-</ul>
+    FakeTyping is a plugin that simulates typewriter effect in your editor. It provides a realistic typing simulation for presentations, tutorials, and video recordings.
+    FakeTyping 是一款在编辑器中模拟打字效果的插件。它为演示文稿、教程和视频录制提供了逼真的打字模拟效果。
     ]]></description>
 
     <change-notes><![CDATA[
@@ -45,7 +36,7 @@
         <!-- 注册设置界面 -->
         <applicationConfigurable instance="com.futao.faketyping.FakeTypingConfigurable"
                                  id="com.futao.faketyping.FakeTypingConfigurable"
-                                 displayName="FakeTyping设置"/>
+                                 displayName="FakeTyping"/>
     </extensions>
 
     <actions>
