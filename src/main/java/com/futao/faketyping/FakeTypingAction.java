@@ -7,6 +7,7 @@ import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.editor.ScrollType;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
@@ -243,6 +244,8 @@ public class FakeTypingAction extends AnAction {
                             document.insertString(charIndex[0], String.valueOf(nextChar));
                             // 移动光标到插入位置之后
                             editor.getCaretModel().moveToOffset(charIndex[0] + 1);
+                            // 确保光标可见（滚动到光标位置）
+                            editor.getScrollingModel().scrollToCaret(ScrollType.MAKE_VISIBLE);
                         });
         
                         // 增加索引
@@ -296,6 +299,8 @@ public class FakeTypingAction extends AnAction {
                         document.insertString(charIndex[0], String.valueOf(nextChar));
                         // 移动光标到插入位置之后
                         editor.getCaretModel().moveToOffset(charIndex[0] + 1);
+                        // 确保光标可见（滚动到光标位置）
+                        editor.getScrollingModel().scrollToCaret(ScrollType.MAKE_VISIBLE);
                     });
     
                     // 增加索引
@@ -325,6 +330,8 @@ public class FakeTypingAction extends AnAction {
                                     document.insertString(charIndex[0], String.valueOf(nextCharInner));
                                     // 移动光标到插入位置之后
                                     editor.getCaretModel().moveToOffset(charIndex[0] + 1);
+                                    // 确保光标可见（滚动到光标位置）
+                                    editor.getScrollingModel().scrollToCaret(ScrollType.MAKE_VISIBLE);
                                 });
                                 charIndex[0]++;
                                 
